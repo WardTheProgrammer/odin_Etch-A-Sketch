@@ -23,7 +23,11 @@ function createGrid(num) {
     div.addEventListener("click", function(event) {
       penDown = !penDown;
       if (penDown) {
-        event.target.style.backgroundColor = gridColor;
+        if (gridColor === "random") {
+          event.target.style.backgroundColor = generateRandomColor();
+        } else {
+          event.target.style.backgroundColor = gridColor;
+        }
       }
     })
     grid.appendChild(div);
