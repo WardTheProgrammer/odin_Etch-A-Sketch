@@ -36,20 +36,6 @@ function createGrid(num) {
       cell[i].style.backgroundColor = "white";
     }
   });
-  random.addEventListener("click", function () {
-    if (gridColor === "random") {
-      gridColor = "black";
-    } else {
-      gridColor = "random";
-    }
-  });
-  eraser.addEventListener("click", function () {
-    if (gridColor == "white") {
-      gridColor = "black";
-    } else {
-      gridColor = "white";
-    }
-  });
 }
 
 gridInput.addEventListener("click", function(){
@@ -71,5 +57,20 @@ function generateRandomColor() {
   console.log(color)
   return color;
 }
+
+random.addEventListener("click", function () {
+    if (gridColor === "random") {
+      gridColor = "black";
+    } else {
+      gridColor = "random";
+    }
+  });
+  eraser.addEventListener("click", function () {
+    if (gridColor == "white") {
+      gridColor = "black";
+    } else {
+      gridColor = "white";
+    }
+  });
 
 createGrid(num);
